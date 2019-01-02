@@ -5,20 +5,68 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <table>
-        <tr>
-          <th><Button /></th>
-          <th><Button /></th>
-        </tr>
-        <tr>
-          <th><Button /></th>
-          <th><Button /></th>
-        </tr>
-      </table>
+      <div>
+        {CourseList({data: Courses})}
+      </div>
     );
   }
 }
 
+/**
+ * Represents a Course and its times.
+ */
+class Course extends Component {
+  constructor(props) {
+    super(props);
+    this.props = props;
+  }
+
+  render() {
+    return (
+      <div>
+        <ul>
+          <li>Name: {this.props.name}</li>
+          <li>Section: {this.props.section}</li>
+          <li>Time(s): {this.props.times}</li>
+        </ul>
+      </div>
+    );
+  }
+}
+
+/**
+ * Sample data
+ */
+const Courses = [
+  {
+    name: "Chemistry",
+    section: 1,
+    times: "1500-1600"
+  },
+  {
+    name: "Calculus",
+    section: 2,
+    times: "1600-1700"
+  },
+  {
+    name: "Biology",
+    section: 3,
+    times: "1700-1800"
+  },
+  {
+    name: "English",
+    section: 4,
+    times: "1800-1900"
+  }
+];
+
+const CourseList = (props) => {
+  return (
+    <div>
+      {props.data.map((course) => <Course {...course} />)}
+    </div>
+  );
+}
 
 class Button extends Component {
 
@@ -42,33 +90,9 @@ class Button extends Component {
   render() {
     return (
       <button onClick={this.handleClick}>
-        {this.state.count}
+        {this.state.count}  
       </button>
     )
-  }
-}
-
-
-class Intro extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
   }
 }
 
