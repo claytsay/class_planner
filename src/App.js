@@ -5,6 +5,53 @@ import './App.css';
 class App extends Component {
   render() {
     return (
+      <table>
+        <tr>
+          <th><Button /></th>
+          <th><Button /></th>
+        </tr>
+        <tr>
+          <th><Button /></th>
+          <th><Button /></th>
+        </tr>
+      </table>
+    );
+  }
+}
+
+
+class Button extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0
+    }
+  }
+
+  handleClick = () => {
+    console.log("You clicked the button!");
+    this.setState(
+      (previousState) => {
+        previousState.count++;
+        return previousState;
+      }
+    );
+  }
+
+  render() {
+    return (
+      <button onClick={this.handleClick}>
+        {this.state.count}
+      </button>
+    )
+  }
+}
+
+
+class Intro extends Component {
+  render() {
+    return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -24,5 +71,6 @@ class App extends Component {
     );
   }
 }
+
 
 export default App;
