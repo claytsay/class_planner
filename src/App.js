@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Courses } from './data_example';
 
 class App extends Component {
+  state = {
+    courses: [
+      
+    ]
+  }
+
   render() {
     return (
       <div>
+        <img src={logo} className="App-logo" alt="logo" />
         {CourseList({data: Courses})}
       </div>
     );
@@ -25,40 +33,15 @@ class Course extends Component {
     return (
       <div>
         <ul>
-          <li>Name: {this.props.name}</li>
-          <li>Section: {this.props.section}</li>
-          <li>Time(s): {this.props.times}</li>
+          <li>Name: {this.props.name.toString()}</li>
+          <li>Section: {this.props.section.toString()}</li>
+          <li>Time(s): {this.props.times.toString()}</li>
         </ul>
       </div>
     );
   }
 }
 
-/**
- * Sample data
- */
-const Courses = [
-  {
-    name: "Chemistry",
-    section: 1,
-    times: "1500-1600"
-  },
-  {
-    name: "Calculus",
-    section: 2,
-    times: "1600-1700"
-  },
-  {
-    name: "Biology",
-    section: 3,
-    times: "1700-1800"
-  },
-  {
-    name: "English",
-    section: 4,
-    times: "1800-1900"
-  }
-];
 
 const CourseList = (props) => {
   return (
@@ -96,5 +79,19 @@ class Button extends Component {
   }
 }
 
+class Form extends Component {
+  handleSubmit() {
+    console.log("Form submitted!");
+  }
+  
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <input type="text" placeholder="CHEM 4B" />
+        <button type="submit">Add Class</button>
+      </form>
+    )
+  }
+}
 
 export default App;
