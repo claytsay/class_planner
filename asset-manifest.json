@@ -1,7 +1,7 @@
 {
   "main.css": "/class_planner/static/css/main.abc03532.chunk.css",
-  "main.js": "/class_planner/static/js/main.55f2fc9c.chunk.js",
-  "main.js.map": "/class_planner/static/js/main.55f2fc9c.chunk.js.map",
+  "main.js": "/class_planner/static/js/main.9d90cf73.chunk.js",
+  "main.js.map": "/class_planner/static/js/main.9d90cf73.chunk.js.map",
   "static/js/1.f03e8ae8.chunk.js": "/class_planner/static/js/1.f03e8ae8.chunk.js",
   "static/js/1.f03e8ae8.chunk.js.map": "/class_planner/static/js/1.f03e8ae8.chunk.js.map",
   "runtime~main.js": "/class_planner/static/js/runtime~main.c0cdcba9.js",
@@ -9,6 +9,6 @@
   "static/media/logo.svg": "/class_planner/static/media/logo.474b43d4.svg",
   "static/css/main.abc03532.chunk.css.map": "/class_planner/static/css/main.abc03532.chunk.css.map",
   "index.html": "/class_planner/index.html",
-  "precache-manifest.7c44097b698b0178cca91a2d4da04b28.js": "/class_planner/precache-manifest.7c44097b698b0178cca91a2d4da04b28.js",
+  "precache-manifest.1d94805980db7fb7d31c9f4fedeb7b6f.js": "/class_planner/precache-manifest.1d94805980db7fb7d31c9f4fedeb7b6f.js",
   "service-worker.js": "/class_planner/service-worker.js"
 }
